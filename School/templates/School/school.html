@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Educators</title>
+    <meta name="description" content="Empowering students to achieve a 100% transition to university with focused, strategic learning.">
+    <meta name="keywords" content="Hope Educators ,Hope, HopeEducators, Educators, Education">
+    <meta name="author" content="Humphrey Tuva">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}">
+
+    
+</head>
+<body>
+    <header>
+        <h1>Hope Educators</h1>
+        <p>Your Partner in Education Excellence</p>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#updates">Updates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Comprehensive high school tuition (all subjects).</li>
+                <li>Inclusive adult education programs (all subjects).</li>
+            </ul>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We specialize in demystifying challenging high school topics, re-enrolling students for KCSE preparation, and guiding them towards their dream careers through tailored lessons and career guidance.</p>
+            <div class="vision">
+                <strong>Vision:</strong> Empowering students to achieve a 100% transition to university with focused, strategic learning.
+            </div>
+            <div class="motto">
+                <strong>Motto:</strong> Dedicated for Success
+            </div>
+        </section>
+
+        <section id="updates">
+            <h2>Student Information Center</h2>
+            <div class="updates">
+                <ul>
+                    {% for schoo in school %}
+
+                    <li>{{schoo.description|linebreaksbr}}</li>
+
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-card">
+                <p>Call or WhatsApp: <a href="tel:+254748097926">0748097926</a></p>
+                <p>Email: <a href="mailto:hopeeducators5@gmail.com">hopeeducators5@gmail.com</a></p>
+                <p>Location: <a href="#">Ngumba-rosters</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hope Educators. Crafted for excellence with <a href="/admin">passion</a>.</p>
+    </footer>
+</body>
+</html>
+{% endblock content %}
